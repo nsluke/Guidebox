@@ -10,6 +10,5 @@
 
 @interface MainTableViewController : UITableViewController
 
-@property (strong,nonatomic) NSArray *candyArray;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "CustomTableViewCell.h"
 
+
 @interface CustomTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *title;

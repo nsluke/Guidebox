@@ -10,4 +10,12 @@
 
 @interface NetworkCommunication : NSObject
 
++ (instancetype)sharedManager;
+- (NSArray *)getFromGuideboxAPI;
+
+@property NSString *searchType;
+@property NSString *searchTerms;
+@property NSDictionary *fetchedData;
+@property (atomic, weak) NSArray *fetchedDataAsArray;
+
 @end
