@@ -10,4 +10,9 @@
 
 @interface CustomTableViewCell : UITableViewCell
 
+@property (nonatomic, copy) NSString *cellTitle;
+@property (nonatomic, copy) NSString *cellDetails;
+@property (nonatomic, copy) NSData   *cellImage;
+
+
 @end

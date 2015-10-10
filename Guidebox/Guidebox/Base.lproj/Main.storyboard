@@ -75,10 +75,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSa-c6-FKM">
-                                            <rect key="frame" x="8" y="96" width="46" height="21"/>
+                                            <rect key="frame" x="8" y="96" width="584" height="21"/>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="46" id="Hfh-f1-sKp"/>
+                                                <constraint firstAttribute="width" constant="584" id="Hfh-f1-sKp"/>
                                                 <constraint firstAttribute="height" constant="21" id="tj2-IB-OWq"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -93,10 +93,10 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5H5-KE-Jjw">
-                                            <rect key="frame" x="8" y="140" width="53" height="21"/>
+                                            <rect key="frame" x="8" y="140" width="584" height="59"/>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="53" id="ol0-IQ-vJn"/>
+                                                <constraint firstAttribute="width" constant="584" id="ol0-IQ-vJn"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -106,7 +106,7 @@
                                     <animations/>
                                     <constraints>
                                         <constraint firstItem="lSa-c6-FKM" firstAttribute="top" secondItem="cnZ-8e-gcB" secondAttribute="bottom" constant="8" symbolic="YES" id="7zS-RO-mYd"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="5H5-KE-Jjw" secondAttribute="bottom" constant="30" id="Fr8-Lk-i6h"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5H5-KE-Jjw" secondAttribute="bottom" constant="-8" id="Fr8-Lk-i6h"/>
                                         <constraint firstItem="5H5-KE-Jjw" firstAttribute="leading" secondItem="lSa-c6-FKM" secondAttribute="leading" id="Mma-7z-aIH"/>
                                         <constraint firstItem="5H5-KE-Jjw" firstAttribute="top" secondItem="lSa-c6-FKM" secondAttribute="bottom" constant="23" id="QHW-VK-yIh"/>
                                         <constraint firstItem="cnZ-8e-gcB" firstAttribute="leading" secondItem="wwR-h9-vW8" secondAttribute="leadingMargin" constant="-8" id="nRW-mu-rE4"/>
@@ -117,6 +117,9 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
+                                    <outlet property="details" destination="5H5-KE-Jjw" id="0A6-Ip-WgA"/>
+                                    <outlet property="image" destination="cnZ-8e-gcB" id="ddj-Z7-fvf"/>
+                                    <outlet property="title" destination="lSa-c6-FKM" id="UBc-bd-iWI"/>
                                     <segue destination="BYZ-38-t0r" kind="showDetail" trigger="accessoryAction" id="IJN-RS-Sw0"/>
                                 </connections>
                             </tableViewCell>

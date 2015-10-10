@@ -7,7 +7,7 @@
 //
 
 #import "MainTableViewController.h"
-
+#import "CustomTableViewCell.h"
 
 @interface MainTableViewController ()
 
@@ -28,7 +28,7 @@
     temporaryArray = [NSArray arrayWithObjects:@"first Object", @"second object", nil];
 
     
-    // Reload the t
+    // Reload the table
     [self.tableView reloadData];
     
     
@@ -66,12 +66,16 @@
     return [temporaryArray count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResponseCell" forIndexPath:indexPath];
-    NSString *cellTitle = [temporaryArray objectAtIndex:indexPath.section];
+    CustomTableViewCell *temporaryCell = [tableView dequeueReusableCellWithIdentifier:@"ResponseCell" forIndexPath:indexPath];
+    NSString *cellTitleString = [temporaryArray objectAtIndex:indexPath.row];
     
-    return cell;
+    NSLog(@"%@", [temporaryArray objectAtIndex:indexPath.row]);
+    
+    temporaryCell.cellTitle = cellTitleString;
+    temporaryCell.cellDetails = cellTitleString;
+    
+    return temporaryCell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
