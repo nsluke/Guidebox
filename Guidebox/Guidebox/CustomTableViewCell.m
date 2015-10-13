@@ -23,21 +23,16 @@
 }
 
 -(void)setCellImage:(NSData *)cellImage {
-    
     _image.image = [UIImage imageWithData:cellImage];
-    
 }
 
 -(void)setCellTitle:(NSString *)cellTitle {
-    _title.text = cellTitle;
-
+    NSLog(@"cellTitle: %@", cellTitle);
+    _title.text = [NSString stringWithFormat:@"%@", cellTitle];
 }
 
 -(void)setCellDetails:(NSString *)cellDetails {
     _details.text = cellDetails;
 }
-
-
-
 
 @end

@@ -12,6 +12,8 @@
 
 + (instancetype)sharedManager;
 - (NSArray *)getFromGuideboxAPI;
+- (void)getDictFromGuideboxAPI;
+
 
 @property NSString *searchType;
 @property NSString *searchTerms;
