@@ -18,16 +18,20 @@
 
 @end
 
-@implementation CustomTableViewCell {
-    
-}
+@implementation CustomTableViewCell
+
+@synthesize cellImage;
+
 
 -(void)setCellImage:(NSData *)cellImage {
-    _image.image = [UIImage imageWithData:cellImage];
+    NSLog(@"%@", self.cellImage);
+//    [self.image setImage:[UIImage imageWithData:self.cellImage] forState:UIControlStateNormal];
+    
+    self.image.image = [UIImage imageWithData:self.cellImage];
 }
 
 -(void)setCellTitle:(NSString *)cellTitle {
-    NSLog(@"cellTitle: %@", cellTitle);
+//    NSLog(@"cellTitle: %@", cellTitle);
     _title.text = [NSString stringWithFormat:@"%@", cellTitle];
 }
 

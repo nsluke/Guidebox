@@ -10,4 +10,6 @@
 
 @interface MainTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSArray *mixArray;
+
 @end

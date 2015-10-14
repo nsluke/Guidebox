@@ -7,21 +7,44 @@
 //
 
 #import "ViewController.h"
+#import "MixObject.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+@property (weak, nonatomic) IBOutlet UITextView *detailView;
+
+- (IBAction)backButtonPushed:(id)sender;
 
 @end
 
 @implementation ViewController
 
+@synthesize title;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.labelTitle.text = self.playlist.title;
+    self.detailView.text = self.playlist.details;
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)setCellImage:(NSData *)cellImage {
+    _imageView.image = [UIImage imageWithData: self.playlist.image];
+}
+
+-(void)setCellTitle:(NSString *)cellTitle {
+    _labelTitle.text = self.playlist.title;
+}
+
+-(void)setCellDetails:(NSString *)cellDetails {
+    _detailView.text = self.playlist.details;
+}
+
+- (IBAction)backButtonPushed:(id)sender {
+    [self performSegueWithIdentifier:@"UnwindSegue" sender:self];
 }
 
 @end

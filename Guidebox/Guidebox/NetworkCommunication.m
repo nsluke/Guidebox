@@ -80,7 +80,7 @@
     
     
     
-        NSString *fixedUrl = [NSString stringWithFormat:@"https://api-public.guidebox.com/v1.43/US/rKpHnCwMGJau0dHs6J3wYVYWcIlvm39e/"];
+    NSString *fixedUrl = [NSString stringWithFormat:@"https://api-public.guidebox.com/v1.43/US/rKpHnCwMGJau0dHs6J3wYVYWcIlvm39e/"];
     
     NSURL *url = [NSURL URLWithString:fixedUrl];
     
