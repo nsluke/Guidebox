@@ -10,7 +10,7 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *titleText;
 @property (nonatomic) NSString *description;
 @property (nonatomic) NSString *imageURL;
 

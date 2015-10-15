@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8B627501D78811F197CC24EC /* libPods-Guidebox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D4FE8B9F5F4EB2B4DCF09E /* libPods-Guidebox.a */; };
 		D58B89E61BCC2D5D00EB8A30 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D58B89E51BCC2D5D00EB8A30 /* libAFNetworking.a */; };
-		D58B89EC1BCE1FAD00EB8A30 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D58B89EA1BCE1FAD00EB8A30 /* DataModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		D58B89EE1BCEDAE600EB8A30 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58B89ED1BCEDAE600EB8A30 /* CoreData.framework */; };
 		D58C94281BC76F4900F66AD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C94271BC76F4900F66AD2 /* main.m */; };
 		D58C942B1BC76F4900F66AD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C942A1BC76F4900F66AD2 /* AppDelegate.m */; };
@@ -20,7 +19,6 @@
 		D58C94411BC76F4900F66AD2 /* GuideboxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C94401BC76F4900F66AD2 /* GuideboxTests.m */; };
 		D58C944C1BC76F4900F66AD2 /* GuideboxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C944B1BC76F4900F66AD2 /* GuideboxUITests.m */; };
 		D58C945B1BC776D600F66AD2 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C945A1BC776D600F66AD2 /* MainTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		D58C945E1BC88BDA00F66AD2 /* NetworkCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C945D1BC88BDA00F66AD2 /* NetworkCommunication.m */; settings = {ASSET_TAGS = (); }; };
 		D58C94611BC89E3600F66AD2 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C94601BC89E3600F66AD2 /* CustomTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -46,7 +44,6 @@
 		A673E6A2F48C28E9F89447B8 /* Pods-Guidebox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guidebox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Guidebox/Pods-Guidebox.debug.xcconfig"; sourceTree = "<group>"; };
 		C5D4FE8B9F5F4EB2B4DCF09E /* libPods-Guidebox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Guidebox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58B89E51BCC2D5D00EB8A30 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
-		D58B89EB1BCE1FAD00EB8A30 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		D58B89ED1BCEDAE600EB8A30 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D58C94231BC76F4900F66AD2 /* Guidebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58C94271BC76F4900F66AD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,8 +63,6 @@
 		D58C944D1BC76F4900F66AD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D58C94591BC776D600F66AD2 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		D58C945A1BC776D600F66AD2 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
-		D58C945C1BC88BDA00F66AD2 /* NetworkCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCommunication.h; sourceTree = "<group>"; };
-		D58C945D1BC88BDA00F66AD2 /* NetworkCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCommunication.m; sourceTree = "<group>"; };
 		D58C945F1BC89E3600F66AD2 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		D58C94601BC89E3600F66AD2 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,14 +143,11 @@
 				D58C942A1BC76F4900F66AD2 /* AppDelegate.m */,
 				D58C942C1BC76F4900F66AD2 /* ViewController.h */,
 				D58C942D1BC76F4900F66AD2 /* ViewController.m */,
-				D58B89EA1BCE1FAD00EB8A30 /* DataModel.xcdatamodeld */,
 				D58C94591BC776D600F66AD2 /* MainTableViewController.h */,
 				D58C945A1BC776D600F66AD2 /* MainTableViewController.m */,
-				D58C945C1BC88BDA00F66AD2 /* NetworkCommunication.h */,
-				D58C945D1BC88BDA00F66AD2 /* NetworkCommunication.m */,
-				D58C942F1BC76F4900F66AD2 /* Main.storyboard */,
 				D58C945F1BC89E3600F66AD2 /* CustomTableViewCell.h */,
 				D58C94601BC89E3600F66AD2 /* CustomTableViewCell.m */,
+				D58C942F1BC76F4900F66AD2 /* Main.storyboard */,
 				D58C94321BC76F4900F66AD2 /* Assets.xcassets */,
 				D58C94341BC76F4900F66AD2 /* LaunchScreen.storyboard */,
 				D58C94371BC76F4900F66AD2 /* Info.plist */,
@@ -372,12 +364,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D58C945B1BC776D600F66AD2 /* MainTableViewController.m in Sources */,
-				D58B89EC1BCE1FAD00EB8A30 /* DataModel.xcdatamodeld in Sources */,
 				D58C942E1BC76F4900F66AD2 /* ViewController.m in Sources */,
 				D58C94611BC89E3600F66AD2 /* CustomTableViewCell.m in Sources */,
 				D58C942B1BC76F4900F66AD2 /* AppDelegate.m in Sources */,
 				D58C94281BC76F4900F66AD2 /* main.m in Sources */,
-				D58C945E1BC88BDA00F66AD2 /* NetworkCommunication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,19 +622,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		D58B89EA1BCE1FAD00EB8A30 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D58B89EB1BCE1FAD00EB8A30 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = D58B89EB1BCE1FAD00EB8A30 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = D58C941B1BC76F4900F66AD2 /* Project object */;
 }

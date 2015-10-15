@@ -15,9 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 @property (weak, nonatomic) IBOutlet UITextView *detailView;
 
-- (IBAction)backButtonPushed:(id)sender;
-
 @end
+
 
 @implementation ViewController
 
@@ -28,18 +27,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.labelTitle.text = self.title;
+    self.labelTitle.text = self.titleText;
     self.detailView.text = self.description;
     
     [self.imageView setImageWithURL:[NSURL URLWithString:self.imageURL]];
-//    [self.imageView
 
-}
-
-
-
-- (IBAction)backButtonPushed:(id)sender {
-    [self performSegueWithIdentifier:@"UnwindSegue" sender:self];
 }
 
 @end

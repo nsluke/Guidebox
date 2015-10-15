@@ -11,8 +11,5 @@
 @interface MainTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *mixArray;
-//@property NSMutableArray *fetchedImageArray;
-
-
 
 @end
