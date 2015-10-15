@@ -4,7 +4,7 @@ An app built for the coding challenge for 8tracks. The app takes in a JSON respo
 
 
 
-In order to make the code compile, you must have a Global.h file formatted like this (put #s in front of all the lines:
+In order to make the code compile, you must have a Global.h file formatted like this (put #s in front of all the lines):
 
 ifndef Global_h
 
