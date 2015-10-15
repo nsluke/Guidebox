@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "MixObject.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface ViewController ()
 
@@ -22,26 +22,21 @@
 @implementation ViewController
 
 @synthesize title;
+@synthesize description;
+@synthesize imageURL;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.labelTitle.text = self.playlist.title;
-    self.detailView.text = self.playlist.details;
+    self.labelTitle.text = self.title;
+    self.detailView.text = self.description;
+    
+    [self.imageView setImageWithURL:[NSURL URLWithString:self.imageURL]];
+//    [self.imageView
 
 }
 
--(void)setCellImage:(NSData *)cellImage {
-    _imageView.image = [UIImage imageWithData: self.playlist.image];
-}
 
--(void)setCellTitle:(NSString *)cellTitle {
-    _labelTitle.text = self.playlist.title;
-}
-
--(void)setCellDetails:(NSString *)cellDetails {
-    _detailView.text = self.playlist.details;
-}
 
 - (IBAction)backButtonPushed:(id)sender {
     [self performSegueWithIdentifier:@"UnwindSegue" sender:self];

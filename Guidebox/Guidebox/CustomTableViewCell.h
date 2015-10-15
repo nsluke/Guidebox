@@ -12,7 +12,7 @@
 
 @property (nonatomic) NSString *cellTitle;
 @property (nonatomic) NSString *cellDetails;
-@property (nonatomic) NSData   *cellImage;
 
+-(void)setCellImage:(NSString *)cellTitle;
 
 @end

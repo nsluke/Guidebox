@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MixObject.h"
 
 @interface ViewController : UIViewController
 
-@property (nonatomic, strong) MixObject *playlist;
+@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *description;
+@property (nonatomic) NSString *imageURL;
+
 
 @end
 

@@ -7,6 +7,8 @@
 //
 
 #import "CustomTableViewCell.h"
+#import <AFNetworking/AFNetworking.h>
+#import "UIImageView+AFNetworking.h"
 
 
 @interface CustomTableViewCell ()
@@ -20,14 +22,14 @@
 
 @implementation CustomTableViewCell
 
-@synthesize cellImage;
 
-
--(void)setCellImage:(NSData *)cellImage {
-    NSLog(@"%@", self.cellImage);
+-(void)setCellImage:(NSString *)cellImageUrl {
+//    NSLog(@"%@", self.cellImage);
 //    [self.image setImage:[UIImage imageWithData:self.cellImage] forState:UIControlStateNormal];
     
-    self.image.image = [UIImage imageWithData:self.cellImage];
+    [self.image setImageWithURL:[NSURL URLWithString:cellImageUrl]];
+
+//    self.image.image = cellImage;
 }
 
 -(void)setCellTitle:(NSString *)cellTitle {
