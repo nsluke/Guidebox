@@ -31,7 +31,6 @@
     self.detailView.text = self.description;
     
     [self.imageView setImageWithURL:[NSURL URLWithString:self.imageURL]];
-
 }
 
 @end

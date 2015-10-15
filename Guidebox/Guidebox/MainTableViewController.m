@@ -17,18 +17,15 @@
 @end
 
 @implementation MainTableViewController {
-    NSArray *temporaryArray;
-    NSDictionary *temporaryDictionary;
-    
     NSDictionary *mixset;
     NSDictionary *currentMix;
     NSDictionary *imageURLs;
     
     NSString *coverImageURL;
     NSMutableArray *fetchedImageArray;
+    
+    NSArray *mixArray;
 }
-
-@synthesize mixArray;
 
 -(void)viewDidLoad {
     [super viewDidLoad];
@@ -38,13 +35,11 @@
 
 #pragma mark - Network Requests
 - (void)getRequestToAPI {
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:@"https://8tracks.com/mix_sets/staff-picks.json?api_version=3&api_key=a77367ded6d762442d5f2076c42ea0df117d7992&include=mixes[lukesolomon]+pagination" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        temporaryDictionary = responseObject;
-        temporaryArray = [responseObject allValues];
-        
-        mixset = [temporaryDictionary objectForKey:@"mix_set"];
+        mixset = [responseObject objectForKey:@"mix_set"];
         mixArray = [mixset objectForKey:@"mixes"];
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -58,6 +53,7 @@
 
 #pragma mark - Table view data source
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     currentMix = [mixArray objectAtIndex:indexPath.row];
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResponseCell" forIndexPath:indexPath];
     NSDictionary *URLDictionary = [NSDictionary dictionaryWithDictionary:[[mixArray objectAtIndex:indexPath.row] objectForKey:@"cover_urls"]];
@@ -91,11 +87,12 @@
     ViewController *destinationController = [segue destinationViewController];
     NSIndexPath *selectedIndexPath = self.tableView.indexPathForSelectedRow;
     
-    destinationController.titleText = [NSString stringWithFormat:@"%@",[[self.mixArray objectAtIndex:selectedIndexPath.row]objectForKey:@"name"]];
+    destinationController.titleText = [NSString stringWithFormat:@"%@",[[mixArray objectAtIndex:selectedIndexPath.row]objectForKey:@"name"]];
     
-    destinationController.description = [NSString stringWithFormat:@"%@",[[self.mixArray objectAtIndex:selectedIndexPath.row]objectForKey:@"description"]];
+    destinationController.description = [NSString stringWithFormat:@"%@",[[mixArray objectAtIndex:selectedIndexPath.row]objectForKey:@"description"]];
     
-    destinationController.imageURL = [[[self.mixArray objectAtIndex:selectedIndexPath.row]objectForKey:@"cover_urls"] objectForKey:@"cropped_imgix_url"];
+    destinationController.imageURL = [[[mixArray objectAtIndex:selectedIndexPath.row]objectForKey:@"cover_urls"] objectForKey:@"cropped_imgix_url"];
     
 }
+
 @end
