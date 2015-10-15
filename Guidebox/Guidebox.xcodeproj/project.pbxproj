@@ -45,6 +45,7 @@
 		C5D4FE8B9F5F4EB2B4DCF09E /* libPods-Guidebox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Guidebox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58B89E51BCC2D5D00EB8A30 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 		D58B89ED1BCEDAE600EB8A30 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D58B89FA1BD051A800EB8A30 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		D58C94231BC76F4900F66AD2 /* Guidebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58C94271BC76F4900F66AD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D58C94291BC76F4900F66AD2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 		D58C94251BC76F4900F66AD2 /* Guidebox */ = {
 			isa = PBXGroup;
 			children = (
+				D58B89FA1BD051A800EB8A30 /* Global.h */,
 				D58C94291BC76F4900F66AD2 /* AppDelegate.h */,
 				D58C942A1BC76F4900F66AD2 /* AppDelegate.m */,
 				D58C942C1BC76F4900F66AD2 /* ViewController.h */,

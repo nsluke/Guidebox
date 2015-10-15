@@ -13,7 +13,8 @@
 @property (nonatomic) NSString *cellTitle;
 @property (nonatomic) NSString *cellDetails;
 
-//cellImageURL needs to be it's own method because the URL for the image gets passed in as an argument from the tableViewCell
+/** cellImageURL needs to be it's own method because the URL for the image gets passed in as an argument from the tableViewCell
+ */
 -(void)setCellImage:(NSString *)cellImageUrl;
 
 @end

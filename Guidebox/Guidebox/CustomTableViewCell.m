@@ -7,7 +7,6 @@
 //
 
 #import "CustomTableViewCell.h"
-#import <AFNetworking/AFNetworking.h>
 #import "UIImageView+AFNetworking.h"
 
 @interface CustomTableViewCell ()

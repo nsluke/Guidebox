@@ -20,15 +20,12 @@
 
 @implementation ViewController
 
-@synthesize title;
-@synthesize description;
-@synthesize imageURL;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.labelTitle.text = self.titleText;
-    self.detailView.text = self.description;
+    
+    self.detailView.text = self.details;
     
     [self.imageView setImageWithURL:[NSURL URLWithString:self.imageURL]];
 }
