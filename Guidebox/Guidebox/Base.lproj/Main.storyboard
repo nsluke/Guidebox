@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPf-nm-0V5">
-                                <rect key="frame" x="20" y="495" width="560" height="37"/>
+                                <rect key="frame" x="20" y="435" width="560" height="37"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="fnC-kd-xHq"/>
@@ -28,10 +28,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTZ-lZ-HXL">
-                                <rect key="frame" x="20" y="540" width="560" height="60"/>
+                                <rect key="frame" x="20" y="480" width="560" height="120"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="5e1-m7-T1U"/>
+                                    <constraint firstAttribute="height" constant="120" id="5e1-m7-T1U"/>
                                     <constraint firstAttribute="height" constant="131" id="leg-f4-JNQ"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -44,7 +44,7 @@
                                 </variation>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l8M-aZ-pQQ">
-                                <rect key="frame" x="92" y="64" width="416" height="417"/>
+                                <rect key="frame" x="92" y="64" width="416" height="357"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="417" id="8jB-Xb-v90"/>
@@ -128,20 +128,20 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8uW-tS-loK" id="wwR-h9-vW8">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cnZ-8e-gcB">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="88"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="82"/>
                                             <animations/>
                                         </imageView>
-                                        <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIh-ge-BZF">
-                                            <rect key="frame" x="0.0" y="141" width="600" height="58"/>
+                                        <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIh-ge-BZF">
+                                            <rect key="frame" x="0.0" y="135" width="600" height="64"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSa-c6-FKM">
-                                            <rect key="frame" x="8" y="141" width="584" height="30"/>
+                                            <rect key="frame" x="8" y="135" width="584" height="36"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -162,7 +162,7 @@
                                     <constraints>
                                         <constraint firstItem="5H5-KE-Jjw" firstAttribute="leading" secondItem="lSa-c6-FKM" secondAttribute="leading" id="1Oe-lp-VMv"/>
                                         <constraint firstItem="cnZ-8e-gcB" firstAttribute="top" secondItem="wwR-h9-vW8" secondAttribute="top" id="2oe-fc-Wgr"/>
-                                        <constraint firstItem="rIh-ge-BZF" firstAttribute="top" secondItem="wwR-h9-vW8" secondAttribute="top" constant="141" id="5qo-nX-TE4"/>
+                                        <constraint firstItem="rIh-ge-BZF" firstAttribute="top" secondItem="wwR-h9-vW8" secondAttribute="top" constant="135" id="5qo-nX-TE4"/>
                                         <constraint firstItem="lSa-c6-FKM" firstAttribute="top" secondItem="cnZ-8e-gcB" secondAttribute="bottom" constant="53" id="7GN-y9-Ndo"/>
                                         <constraint firstItem="rIh-ge-BZF" firstAttribute="top" secondItem="lSa-c6-FKM" secondAttribute="top" id="8vJ-7Q-T1U"/>
                                         <constraint firstItem="lSa-c6-FKM" firstAttribute="centerX" secondItem="cnZ-8e-gcB" secondAttribute="centerX" id="Guo-iw-rYL"/>
