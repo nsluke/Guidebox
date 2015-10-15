@@ -4,17 +4,18 @@ An app built for the coding challenge for 8tracks. The app takes in a JSON respo
 
 
 
-In order to make the code compile, you must have a Global.h file formatted like this (put #s in front of all the lines):
+In order to make the code compile, you must have a Global.h file formatted like this:
 
-ifndef Global_h
+'''Objective-C
+#ifndef Global_h
 
-define Global_h
+#define Global_h
 
 
-define APIKEY @""
+#define APIKEY @""
 
-endif /* Global_h */
-
+#endif /* Global_h */
+'''
 
 
 Then all you need to go is put your API key in the quotes.
