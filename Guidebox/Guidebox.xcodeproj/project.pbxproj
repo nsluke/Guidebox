@@ -20,6 +20,10 @@
 		D58C944C1BC76F4900F66AD2 /* GuideboxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C944B1BC76F4900F66AD2 /* GuideboxUITests.m */; };
 		D58C945B1BC776D600F66AD2 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C945A1BC776D600F66AD2 /* MainTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D58C94611BC89E3600F66AD2 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C94601BC89E3600F66AD2 /* CustomTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		D5B8D1FC1BD833EC0005865E /* SearchState.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B8D1FB1BD833EC0005865E /* SearchState.m */; settings = {ASSET_TAGS = (); }; };
+		D5F248F11BD2BDD3008B68EB /* DataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F248F01BD2BDD3008B68EB /* DataObject.m */; settings = {ASSET_TAGS = (); }; };
+		D5F248F41BD2CE8C008B68EB /* ChooseRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F248F31BD2CE8C008B68EB /* ChooseRegionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D5F248F81BD6D146008B68EB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F248F71BD6D146008B68EB /* SearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,14 @@
 		D58C945A1BC776D600F66AD2 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		D58C945F1BC89E3600F66AD2 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		D58C94601BC89E3600F66AD2 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		D5B8D1FA1BD833EC0005865E /* SearchState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchState.h; sourceTree = "<group>"; };
+		D5B8D1FB1BD833EC0005865E /* SearchState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchState.m; sourceTree = "<group>"; };
+		D5F248EF1BD2BDD3008B68EB /* DataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataObject.h; sourceTree = "<group>"; };
+		D5F248F01BD2BDD3008B68EB /* DataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataObject.m; sourceTree = "<group>"; };
+		D5F248F21BD2CE8C008B68EB /* ChooseRegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseRegionViewController.h; sourceTree = "<group>"; };
+		D5F248F31BD2CE8C008B68EB /* ChooseRegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseRegionViewController.m; sourceTree = "<group>"; };
+		D5F248F61BD6D146008B68EB /* Guidebox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Guidebox-Bridging-Header.h"; sourceTree = "<group>"; };
+		D5F248F71BD6D146008B68EB /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,17 +155,20 @@
 				D58B89FA1BD051A800EB8A30 /* Global.h */,
 				D58C94291BC76F4900F66AD2 /* AppDelegate.h */,
 				D58C942A1BC76F4900F66AD2 /* AppDelegate.m */,
-				D58C942C1BC76F4900F66AD2 /* ViewController.h */,
-				D58C942D1BC76F4900F66AD2 /* ViewController.m */,
-				D58C94591BC776D600F66AD2 /* MainTableViewController.h */,
-				D58C945A1BC776D600F66AD2 /* MainTableViewController.m */,
+				D5F248F51BD2CEA1008B68EB /* ViewControllers */,
+				D5F248EF1BD2BDD3008B68EB /* DataObject.h */,
+				D5F248F01BD2BDD3008B68EB /* DataObject.m */,
 				D58C945F1BC89E3600F66AD2 /* CustomTableViewCell.h */,
 				D58C94601BC89E3600F66AD2 /* CustomTableViewCell.m */,
+				D5F248F71BD6D146008B68EB /* SearchViewController.swift */,
+				D5B8D1FA1BD833EC0005865E /* SearchState.h */,
+				D5B8D1FB1BD833EC0005865E /* SearchState.m */,
 				D58C942F1BC76F4900F66AD2 /* Main.storyboard */,
 				D58C94321BC76F4900F66AD2 /* Assets.xcassets */,
 				D58C94341BC76F4900F66AD2 /* LaunchScreen.storyboard */,
 				D58C94371BC76F4900F66AD2 /* Info.plist */,
 				D58C94261BC76F4900F66AD2 /* Supporting Files */,
+				D5F248F61BD6D146008B68EB /* Guidebox-Bridging-Header.h */,
 			);
 			path = Guidebox;
 			sourceTree = "<group>";
@@ -182,6 +197,19 @@
 				D58C944D1BC76F4900F66AD2 /* Info.plist */,
 			);
 			path = GuideboxUITests;
+			sourceTree = "<group>";
+		};
+		D5F248F51BD2CEA1008B68EB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D58C942C1BC76F4900F66AD2 /* ViewController.h */,
+				D58C942D1BC76F4900F66AD2 /* ViewController.m */,
+				D58C94591BC776D600F66AD2 /* MainTableViewController.h */,
+				D58C945A1BC776D600F66AD2 /* MainTableViewController.m */,
+				D5F248F21BD2CE8C008B68EB /* ChooseRegionViewController.h */,
+				D5F248F31BD2CE8C008B68EB /* ChooseRegionViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +277,7 @@
 		D58C941B1BC76F4900F66AD2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Luke Solomon";
 				TargetAttributes = {
@@ -365,6 +394,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F248F41BD2CE8C008B68EB /* ChooseRegionViewController.m in Sources */,
+				D5F248F11BD2BDD3008B68EB /* DataObject.m in Sources */,
+				D5B8D1FC1BD833EC0005865E /* SearchState.m in Sources */,
+				D5F248F81BD6D146008B68EB /* SearchViewController.swift in Sources */,
 				D58C945B1BC776D600F66AD2 /* MainTableViewController.m in Sources */,
 				D58C942E1BC76F4900F66AD2 /* ViewController.m in Sources */,
 				D58C94611BC89E3600F66AD2 /* CustomTableViewCell.m in Sources */,
@@ -509,6 +542,7 @@
 			baseConfigurationReference = A673E6A2F48C28E9F89447B8 /* Pods-Guidebox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Guidebox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -517,6 +551,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = LukeSolomon.Guidebox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Guidebox/Guidebox-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -525,6 +561,7 @@
 			baseConfigurationReference = 621A5F9DC1DD7CFDD2FE2DA1 /* Pods-Guidebox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Guidebox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -533,6 +570,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = LukeSolomon.Guidebox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Guidebox/Guidebox-Bridging-Header.h";
 			};
 			name = Release;
 		};

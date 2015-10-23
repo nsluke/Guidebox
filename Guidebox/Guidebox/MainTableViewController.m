@@ -15,7 +15,7 @@
 #include "Global.h"
 
 @implementation MainTableViewController {
-    NSArray *mixArray;
+    NSArray *resultsArray;
 }
 
 -(void)viewDidLoad {
@@ -28,10 +28,9 @@
 - (void)getRequestToAPI {
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:[NSString stringWithFormat:@"https://8tracks.com/mix_sets/staff-picks.json?api_version=3&api_key=%@&include=mixes[lukesolomon]+pagination", APIKEY] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        mixArray = [[responseObject objectForKey:@"mix_set" ] objectForKey:@"mixes"] ;
-        
+    [manager GET:[NSString stringWithFormat:@"https://api-public.guidebox.com/v1.43/US/%@/shows/all/0/5/all/all/", APIKEY] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+        resultsArray = [responseObject objectForKey:@"results"];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
         });
@@ -46,15 +45,15 @@
     
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResponseCell" forIndexPath:indexPath];
     
-    cell.cellTitle = [[mixArray objectAtIndex:indexPath.row] objectForKey:@"name"];
-    cell.cellDetails = [[mixArray objectAtIndex:indexPath.row] objectForKey:@"description"];
-    [cell setCellImage: [[[mixArray objectAtIndex:indexPath.row] objectForKey:@"cover_urls"] objectForKey:@"cropped_imgix_url"]];
+    cell.cellTitle = [[resultsArray objectAtIndex:indexPath.row] objectForKey:@"title"];
+    cell.cellDetails = [[resultsArray objectAtIndex:indexPath.row] objectForKey:@"first_aired"];
+    [cell setCellImage: [[resultsArray objectAtIndex:indexPath.row] objectForKey:@"artwork_448x252"]];
 
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [mixArray count];
+    return [resultsArray count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -68,12 +67,15 @@
 #pragma mark - Segues
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    
     ViewController *destinationController = [segue destinationViewController];
     
-    destinationController.titleText = [NSString stringWithFormat:@"%@",[[mixArray objectAtIndex:self.tableView.indexPathForSelectedRow.row] objectForKey:@"name"]];
-    destinationController.details = [NSString stringWithFormat:@"%@",[[mixArray objectAtIndex:self.tableView.indexPathForSelectedRow.row] objectForKey:@"description"]];
-    destinationController.imageURL = [[[mixArray objectAtIndex:self.tableView.indexPathForSelectedRow.row]objectForKey:@"cover_urls"] objectForKey:@"cropped_imgix_url"];
-
+    if ([segue.identifier isEqual: @"showDetail"]) {
+        
+        destinationController.titleText = [NSString stringWithFormat:@"%@",[[resultsArray objectAtIndex:self.tableView.indexPathForSelectedRow.row] objectForKey:@"title"]];
+        destinationController.details = [NSString stringWithFormat:@"%@",[[resultsArray objectAtIndex:self.tableView.indexPathForSelectedRow.row] objectForKey:@"first_aired"]];
+        destinationController.imageURL = [[resultsArray objectAtIndex:self.tableView.indexPathForSelectedRow.row]objectForKey:@"artwork_448x252"];
+    }
     
     
 }
