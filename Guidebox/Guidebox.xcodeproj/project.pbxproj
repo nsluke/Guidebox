@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B627501D78811F197CC24EC /* libPods-Guidebox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5D4FE8B9F5F4EB2B4DCF09E /* libPods-Guidebox.a */; };
+		D550F4201BDADE1C0065E826 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D550F41F1BDADE1C0065E826 /* CustomNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
 		D58B89E61BCC2D5D00EB8A30 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D58B89E51BCC2D5D00EB8A30 /* libAFNetworking.a */; };
 		D58B89EE1BCEDAE600EB8A30 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58B89ED1BCEDAE600EB8A30 /* CoreData.framework */; };
 		D58C94281BC76F4900F66AD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C94271BC76F4900F66AD2 /* main.m */; };
@@ -47,6 +48,7 @@
 		621A5F9DC1DD7CFDD2FE2DA1 /* Pods-Guidebox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guidebox.release.xcconfig"; path = "Pods/Target Support Files/Pods-Guidebox/Pods-Guidebox.release.xcconfig"; sourceTree = "<group>"; };
 		A673E6A2F48C28E9F89447B8 /* Pods-Guidebox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guidebox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Guidebox/Pods-Guidebox.debug.xcconfig"; sourceTree = "<group>"; };
 		C5D4FE8B9F5F4EB2B4DCF09E /* libPods-Guidebox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Guidebox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D550F41F1BDADE1C0065E826 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		D58B89E51BCC2D5D00EB8A30 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Pods/../build/Debug-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
 		D58B89ED1BCEDAE600EB8A30 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D58B89FA1BD051A800EB8A30 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
@@ -160,7 +162,6 @@
 				D5F248F01BD2BDD3008B68EB /* DataObject.m */,
 				D58C945F1BC89E3600F66AD2 /* CustomTableViewCell.h */,
 				D58C94601BC89E3600F66AD2 /* CustomTableViewCell.m */,
-				D5F248F71BD6D146008B68EB /* SearchViewController.swift */,
 				D5B8D1FA1BD833EC0005865E /* SearchState.h */,
 				D5B8D1FB1BD833EC0005865E /* SearchState.m */,
 				D58C942F1BC76F4900F66AD2 /* Main.storyboard */,
@@ -208,6 +209,8 @@
 				D58C945A1BC776D600F66AD2 /* MainTableViewController.m */,
 				D5F248F21BD2CE8C008B68EB /* ChooseRegionViewController.h */,
 				D5F248F31BD2CE8C008B68EB /* ChooseRegionViewController.m */,
+				D5F248F71BD6D146008B68EB /* SearchViewController.swift */,
+				D550F41F1BDADE1C0065E826 /* CustomNavigationController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				D5F248F81BD6D146008B68EB /* SearchViewController.swift in Sources */,
 				D58C945B1BC776D600F66AD2 /* MainTableViewController.m in Sources */,
 				D58C942E1BC76F4900F66AD2 /* ViewController.m in Sources */,
+				D550F4201BDADE1C0065E826 /* CustomNavigationController.swift in Sources */,
 				D58C94611BC89E3600F66AD2 /* CustomTableViewCell.m in Sources */,
 				D58C942B1BC76F4900F66AD2 /* AppDelegate.m in Sources */,
 				D58C94281BC76F4900F66AD2 /* main.m in Sources */,

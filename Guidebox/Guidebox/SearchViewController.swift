@@ -8,16 +8,14 @@
 
 import UIKit
 
-
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var topPicker: UIPickerView!
     @IBOutlet weak var bottomPicker: UIPickerView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    
-    let topPickerData = ["Mozzarella","Gorgonzola","Provolone","Brie","Maytag Blue","Sharp Cheddar","Monterrey Jack","Stilton","Gouda","Goat Cheese", "Asiago"]
-    
-    let bottomPickerData = ["5","10"]
+    let topPickerData = Array(1..<10)
+    let bottomPickerData = Array(1..<10)
     
     
     override func viewDidLoad() {
@@ -43,7 +41,6 @@ extension SearchViewController: UIPickerViewDataSource {
         
         if (pickerView == topPicker) {
             return topPickerData.count
-
         } else if (pickerView == bottomPicker) {
             return bottomPickerData.count
         }
@@ -55,19 +52,22 @@ extension SearchViewController: UIPickerViewDelegate {
     //MARK: Delegates
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (pickerView == topPicker) {
-            return topPickerData[row]
+            return String(topPickerData[row])
         } else if (pickerView == bottomPicker) {
-            return bottomPickerData[row]
+            return String(bottomPickerData[row])
         }
         return "No data found. Try refreshing."
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView == topPicker) {
-            //do something
+            SearchState.sharedManager().indexOfWhereToStart = pickerView.selectedRowInComponent(component)+1
         } else if (pickerView == bottomPicker) {
-            //do something else
+            SearchState.sharedManager().numberOfResultsToShow = pickerView.selectedRowInComponent(component)+1
         }
+        
+        print(" \(SearchState.sharedManager().indexOfWhereToStart)")
+        print(" \(SearchState.sharedManager().numberOfResultsToShow)")
     }
     
     

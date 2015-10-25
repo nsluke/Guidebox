@@ -9,9 +9,9 @@
 #import "SearchState.h"
 
 @implementation SearchState
-
-@synthesize numberOfResultsToShow;
-@synthesize indexOfWhereToStart;
+//
+//@synthesize numberOfResultsToShow;
+//@synthesize indexOfWhereToStart;
 
 
 

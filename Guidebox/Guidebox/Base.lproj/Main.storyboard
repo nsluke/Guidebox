@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GQh-wJ-EQ5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GQh-wJ-EQ5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -97,46 +97,20 @@
             </objects>
             <point key="canvasLocation" x="-446" y="1240"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="nA2-kq-o1p">
-            <objects>
-                <tableViewController id="oMZ-8f-yNK" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TBg-il-dwf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rfR-qL-Lxp">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rfR-qL-Lxp" id="fbW-i1-G6d">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="oMZ-8f-yNK" id="WaZ-uy-b3L"/>
-                            <outlet property="delegate" destination="oMZ-8f-yNK" id="c56-u0-8l5"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u2f-QG-xab" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="240" y="1539"/>
-        </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation Controller-->
         <scene sceneID="q1Y-hE-DTa">
             <objects>
-                <navigationController id="GQh-wJ-EQ5" sceneMemberID="viewController">
+                <navigationController id="GQh-wJ-EQ5" customClass="CustomNavigationController" customModule="Guidebox" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fQ8-k4-lix">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3Xv-c0-sxM">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </toolbar>
                     <connections>
                         <segue destination="eOm-oS-dvV" kind="relationship" relationship="rootViewController" id="SSY-Wq-BGq"/>
                     </connections>
@@ -144,42 +118,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gz9-fU-Enm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1130" y="529"/>
-        </scene>
-        <!--Choose Region View Controller-->
-        <scene sceneID="7V6-gg-CtJ">
-            <objects>
-                <viewController id="acu-s0-i8f" customClass="ChooseRegionViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="J56-pX-eWG"/>
-                        <viewControllerLayoutGuide type="bottom" id="4g3-Cy-wdm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5Me-LL-HdL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="United Kingdom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5r0-Ee-Apl">
-                                <rect key="frame" x="238" y="472" width="124" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="United States" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHK-Tm-Pfp">
-                                <rect key="frame" x="248" y="175" width="104" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="3lz-6F-e3J"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ooy-Fp-LYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1130" y="1240"/>
         </scene>
         <!--Main Table View Controller-->
         <scene sceneID="mY3-po-Hht">
@@ -190,7 +128,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="p7C-gA-oqI">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search for a Movie or Show!" id="p7C-gA-oqI">
                             <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <animations/>
@@ -270,6 +208,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="titleSearchBar" destination="p7C-gA-oqI" id="He6-hk-gCm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ks3-Cm-Hgx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -287,11 +228,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="998-SM-bye">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="998-SM-bye">
                                 <rect key="frame" x="0.0" y="64" width="600" height="865"/>
                                 <subviews>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WEd-Am-oqH">
-                                        <rect key="frame" x="200" y="8" width="200" height="216"/>
+                                    <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qJ-nK-P6z">
+                                        <rect key="frame" x="200" y="319" width="200" height="216"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="IeO-52-b6t"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aJX-5b-7Zu">
+                                        <rect key="frame" x="240" y="8" width="121" height="29"/>
+                                        <animations/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ToN-2l-f5i">
+                                        <rect key="frame" x="240" y="44" width="121" height="29"/>
+                                        <animations/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEd-Am-oqH">
+                                        <rect key="frame" x="200" y="105" width="200" height="216"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Cm5-q2-JUR"/>
@@ -299,13 +263,6 @@
                                         <connections>
                                             <outlet property="dataSource" destination="998-SM-bye" id="ebJ-ih-FLk"/>
                                         </connections>
-                                    </pickerView>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qJ-nK-P6z">
-                                        <rect key="frame" x="200" y="232" width="200" height="216"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="IeO-52-b6t"/>
-                                        </constraints>
                                     </pickerView>
                                 </subviews>
                                 <animations/>
@@ -330,6 +287,7 @@
                                     <mask key="constraints">
                                         <exclude reference="Kxg-9J-Eo7"/>
                                         <exclude reference="Spi-FG-phP"/>
+                                        <exclude reference="hHL-tU-LcS"/>
                                         <exclude reference="5in-VW-PIe"/>
                                         <exclude reference="6EM-CP-41R"/>
                                         <exclude reference="B7g-Kf-120"/>
@@ -358,6 +316,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomPicker" destination="1qJ-nK-P6z" id="jV6-xQ-pkH"/>
+                        <outlet property="segmentedControl" destination="aJX-5b-7Zu" id="3ur-vL-lqV"/>
                         <outlet property="topPicker" destination="WEd-Am-oqH" id="ENl-Tj-sPd"/>
                     </connections>
                 </viewController>

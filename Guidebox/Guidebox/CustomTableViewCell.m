@@ -21,6 +21,8 @@
 @implementation CustomTableViewCell
 
 -(void)setCellImage:(NSString *)cellImageUrl {
+    self.image.image = nil;
+    
     [self.image setImageWithURL:[NSURL URLWithString:cellImageUrl]];
 }
 

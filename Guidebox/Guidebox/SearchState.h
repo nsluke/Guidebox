@@ -8,13 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface SearchState : NSObject
 
 
 @property (nonatomic) NSNumber *numberOfResultsToShow;
 @property (nonatomic) NSNumber *indexOfWhereToStart;
-
 
 + (instancetype)sharedManager;
 
