@@ -228,60 +228,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="998-SM-bye">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="998-SM-bye">
                                 <rect key="frame" x="0.0" y="64" width="600" height="865"/>
                                 <subviews>
-                                    <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qJ-nK-P6z">
-                                        <rect key="frame" x="200" y="319" width="200" height="216"/>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WEd-Am-oqH">
+                                        <rect key="frame" x="200" y="174" width="200" height="216"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="IeO-52-b6t"/>
-                                        </constraints>
-                                    </pickerView>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aJX-5b-7Zu">
-                                        <rect key="frame" x="240" y="8" width="121" height="29"/>
-                                        <animations/>
-                                        <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
-                                        </segments>
-                                    </segmentedControl>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ToN-2l-f5i">
-                                        <rect key="frame" x="240" y="44" width="121" height="29"/>
-                                        <animations/>
-                                        <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
-                                        </segments>
-                                    </segmentedControl>
-                                    <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEd-Am-oqH">
-                                        <rect key="frame" x="200" y="105" width="200" height="216"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="Cm5-q2-JUR"/>
+                                            <constraint firstAttribute="width" constant="200" id="Zxh-L1-qJL"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="dataSource" destination="998-SM-bye" id="ebJ-ih-FLk"/>
                                         </connections>
                                     </pickerView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qJ-nK-P6z">
+                                        <rect key="frame" x="200" y="398" width="200" height="216"/>
+                                        <animations/>
+                                    </pickerView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aJX-5b-7Zu">
+                                        <rect key="frame" x="197" y="47" width="207" height="29"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="207" id="j81-nU-cZ8"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="United States"/>
+                                            <segment title="United Kingdom"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="regionChanged:" destination="bTt-qZ-kvR" eventType="valueChanged" id="7wc-mA-Chn"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="797-3E-OTK">
+                                        <rect key="frame" x="271" y="18" width="58" height="21"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="58" id="3Rv-eU-1Ju"/>
+                                            <constraint firstAttribute="height" constant="21" id="rS8-Ep-R1K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search For:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4h-gY-si6">
+                                        <rect key="frame" x="256" y="83" width="88" height="21"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="eyG-40-lQd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ToN-2l-f5i">
+                                        <rect key="frame" x="240" y="112" width="121" height="29"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="121" id="G3e-DH-Owj"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Shows"/>
+                                            <segment title="Movies"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentedControlChanged:" destination="bTt-qZ-kvR" eventType="valueChanged" id="ZUb-MC-NiH"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstItem="797-3E-OTK" firstAttribute="top" secondItem="998-SM-bye" secondAttribute="top" constant="18" id="3cF-51-uHo"/>
                                     <constraint firstItem="1qJ-nK-P6z" firstAttribute="leading" secondItem="WEd-Am-oqH" secondAttribute="leading" id="5in-VW-PIe"/>
                                     <constraint firstItem="1qJ-nK-P6z" firstAttribute="centerX" secondItem="998-SM-bye" secondAttribute="centerX" id="6EM-CP-41R"/>
-                                    <constraint firstItem="1qJ-nK-P6z" firstAttribute="centerX" secondItem="998-SM-bye" secondAttribute="centerX" id="9Z7-Re-Hwh"/>
+                                    <constraint firstItem="ToN-2l-f5i" firstAttribute="top" secondItem="b4h-gY-si6" secondAttribute="bottom" constant="8" symbolic="YES" id="A5I-eh-thZ"/>
                                     <constraint firstItem="1qJ-nK-P6z" firstAttribute="leading" secondItem="WEd-Am-oqH" secondAttribute="leading" id="B7g-Kf-120"/>
-                                    <constraint firstItem="1qJ-nK-P6z" firstAttribute="top" secondItem="WEd-Am-oqH" secondAttribute="bottom" constant="8" id="C31-8z-fwd"/>
+                                    <constraint firstItem="ToN-2l-f5i" firstAttribute="centerX" secondItem="WEd-Am-oqH" secondAttribute="centerX" id="Cp9-ud-eQM"/>
+                                    <constraint firstItem="1qJ-nK-P6z" firstAttribute="top" secondItem="WEd-Am-oqH" secondAttribute="bottom" constant="8" symbolic="YES" id="GqO-rw-1SY"/>
+                                    <constraint firstItem="WEd-Am-oqH" firstAttribute="trailing" secondItem="1qJ-nK-P6z" secondAttribute="trailing" id="K0A-0c-bPe"/>
                                     <constraint firstItem="WEd-Am-oqH" firstAttribute="leading" secondItem="998-SM-bye" secondAttribute="leading" constant="200" id="Kxg-9J-Eo7"/>
+                                    <constraint firstItem="797-3E-OTK" firstAttribute="centerX" secondItem="aJX-5b-7Zu" secondAttribute="centerX" id="OHj-Rx-fPJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="aJX-5b-7Zu" secondAttribute="trailing" constant="196" id="QaP-JE-Mb8"/>
                                     <constraint firstItem="1qJ-nK-P6z" firstAttribute="leading" secondItem="998-SM-bye" secondAttribute="leading" constant="100" id="SGL-hg-x4F"/>
+                                    <constraint firstItem="aJX-5b-7Zu" firstAttribute="top" secondItem="797-3E-OTK" secondAttribute="bottom" constant="8" symbolic="YES" id="SYd-8x-4wH"/>
                                     <constraint firstAttribute="trailing" secondItem="WEd-Am-oqH" secondAttribute="trailing" constant="200" id="Spi-FG-phP"/>
-                                    <constraint firstItem="WEd-Am-oqH" firstAttribute="centerX" secondItem="998-SM-bye" secondAttribute="centerX" id="d47-Aj-3Dc"/>
+                                    <constraint firstItem="b4h-gY-si6" firstAttribute="centerX" secondItem="ToN-2l-f5i" secondAttribute="centerX" id="TPu-CO-DZW"/>
+                                    <constraint firstItem="WEd-Am-oqH" firstAttribute="top" secondItem="ToN-2l-f5i" secondAttribute="bottom" constant="34" id="ZDA-Ld-qPy"/>
+                                    <constraint firstAttribute="bottom" secondItem="1qJ-nK-P6z" secondAttribute="bottom" constant="187" id="ZWH-qZ-NxT"/>
                                     <constraint firstItem="1qJ-nK-P6z" firstAttribute="trailing" secondItem="WEd-Am-oqH" secondAttribute="trailing" id="gg6-KZ-Cxj"/>
                                     <constraint firstItem="WEd-Am-oqH" firstAttribute="top" secondItem="998-SM-bye" secondAttribute="top" constant="8" id="hHL-tU-LcS"/>
-                                    <constraint firstAttribute="bottom" secondItem="1qJ-nK-P6z" secondAttribute="bottom" constant="425" id="k3M-IO-fkc"/>
+                                    <constraint firstItem="b4h-gY-si6" firstAttribute="top" secondItem="aJX-5b-7Zu" secondAttribute="bottom" constant="8" symbolic="YES" id="jRG-KM-kRQ"/>
                                     <constraint firstItem="1qJ-nK-P6z" firstAttribute="trailing" secondItem="WEd-Am-oqH" secondAttribute="trailing" id="keB-2J-LCx"/>
-                                    <constraint firstAttribute="trailing" secondItem="WEd-Am-oqH" secondAttribute="trailing" constant="200" id="lkB-Y9-EI5"/>
+                                    <constraint firstItem="1qJ-nK-P6z" firstAttribute="centerX" secondItem="998-SM-bye" secondAttribute="centerX" id="lEN-vu-z4d"/>
+                                    <constraint firstItem="1qJ-nK-P6z" firstAttribute="leading" secondItem="WEd-Am-oqH" secondAttribute="leading" id="maM-3m-ETf"/>
                                     <constraint firstAttribute="trailing" secondItem="1qJ-nK-P6z" secondAttribute="trailing" constant="100" id="nLa-Tj-Vbo"/>
+                                    <constraint firstItem="aJX-5b-7Zu" firstAttribute="centerX" secondItem="b4h-gY-si6" secondAttribute="centerX" id="p92-3Q-9qR"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -302,10 +342,10 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="998-SM-bye" firstAttribute="leading" secondItem="Z6p-wJ-xFQ" secondAttribute="leading" id="HZE-xR-uYH"/>
-                            <constraint firstAttribute="trailing" secondItem="998-SM-bye" secondAttribute="trailing" id="N7w-Gk-0df"/>
-                            <constraint firstItem="998-SM-bye" firstAttribute="top" secondItem="6C7-kh-Fnb" secondAttribute="bottom" id="hgy-cV-bGx"/>
-                            <constraint firstAttribute="bottom" secondItem="998-SM-bye" secondAttribute="bottom" constant="-329" id="m0m-od-730"/>
+                            <constraint firstAttribute="trailing" secondItem="998-SM-bye" secondAttribute="trailing" id="Bej-YW-78E"/>
+                            <constraint firstItem="998-SM-bye" firstAttribute="top" secondItem="6C7-kh-Fnb" secondAttribute="bottom" id="VE6-dc-GD5"/>
+                            <constraint firstItem="998-SM-bye" firstAttribute="leading" secondItem="Z6p-wJ-xFQ" secondAttribute="leading" id="btG-N4-u6v"/>
+                            <constraint firstAttribute="bottom" secondItem="998-SM-bye" secondAttribute="bottom" constant="-329" id="eGm-5b-qu0"/>
                             <constraint firstItem="998-SM-bye" firstAttribute="centerX" secondItem="Z6p-wJ-xFQ" secondAttribute="centerX" id="o2X-Wn-Pt0"/>
                         </constraints>
                         <variation key="default">
@@ -316,7 +356,8 @@
                     </view>
                     <connections>
                         <outlet property="bottomPicker" destination="1qJ-nK-P6z" id="jV6-xQ-pkH"/>
-                        <outlet property="segmentedControl" destination="aJX-5b-7Zu" id="3ur-vL-lqV"/>
+                        <outlet property="regionSegmentedControl" destination="aJX-5b-7Zu" id="vYu-zX-tep"/>
+                        <outlet property="searchforSegmentedControl" destination="ToN-2l-f5i" id="NoY-05-csq"/>
                         <outlet property="topPicker" destination="WEd-Am-oqH" id="ENl-Tj-sPd"/>
                     </connections>
                 </viewController>

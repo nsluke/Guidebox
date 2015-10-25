@@ -12,7 +12,9 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var topPicker: UIPickerView!
     @IBOutlet weak var bottomPicker: UIPickerView!
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var regionSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var searchforSegmentedControl: UISegmentedControl!
     
     let topPickerData = Array(1..<10)
     let bottomPickerData = Array(1..<10)
@@ -26,10 +28,26 @@ class SearchViewController: UIViewController {
         
         bottomPicker.dataSource = self
         bottomPicker.delegate = self
+//        
+//        regionSegmentedControl.addTarget(self, action: "action:", forControlEvents: .ValueChanged)
+//        searchforSegmentedControl.addTarget(self, action: "action:", forControlEvents: .ValueChanged)
     }
     
+    @IBAction func regionChanged(sender: AnyObject) {
+        if (regionSegmentedControl.selectedSegmentIndex == 0) {
+            SearchState.sharedManager().searchType = "US"
+        } else {
+            SearchState.sharedManager().searchType = "UK"
+        }
+    }
     
-    
+    @IBAction func segmentedControlChanged(sender: AnyObject) {
+        if (searchforSegmentedControl.selectedSegmentIndex == 0) {
+            SearchState.sharedManager().searchType = "shows"
+        } else {
+            SearchState.sharedManager().searchType = "movies"
+        }
+    }
 }
 
 extension SearchViewController: UIPickerViewDataSource {

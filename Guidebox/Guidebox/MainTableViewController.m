@@ -21,14 +21,22 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
+
 //    if ([[SearchState sharedManager].indexOfWhereToStart isKindOfClass:[NSNull class]]) {
         [SearchState sharedManager].indexOfWhereToStart = [NSNumber numberWithInt:0];
 //    } else if ([[SearchState sharedManager].numberOfResultsToShow isKindOfClass:[NSNull class]]) {
         [SearchState sharedManager].numberOfResultsToShow = [NSNumber numberWithInt:10];
 //    }
+    
+    if ([SearchState sharedManager].searchRegion == nil) {
+        [SearchState sharedManager].searchRegion = @"US";
+    }
+    
+    if ([SearchState sharedManager].searchType == nil) {
+        [SearchState sharedManager].searchType = @"shows";
+    }
+    
+    
     
     NSLog(@"%@ & %@",[SearchState sharedManager].indexOfWhereToStart,[SearchState sharedManager].numberOfResultsToShow);
 
@@ -43,7 +51,15 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-    [manager GET:[NSString stringWithFormat:@"https://api-public.guidebox.com/v1.43/US/%@/shows/all/%@/%@/all/all/", APIKEY, [[SearchState sharedManager].indexOfWhereToStart stringValue],[[SearchState sharedManager].numberOfResultsToShow stringValue]] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSString *URLString = [NSString stringWithFormat:@"https://api-public.guidebox.com/v1.43/%@/%@/%@/all/%@/%@/all/all/",
+                           [SearchState sharedManager].searchRegion,
+                           APIKEY,
+                           [SearchState sharedManager].searchType,
+                           [[SearchState sharedManager].indexOfWhereToStart stringValue],
+                           [[SearchState sharedManager].numberOfResultsToShow stringValue]];
+    NSLog(@"URLString: %@", URLString);
+
+    [manager GET:URLString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         resultsArray = [responseObject objectForKey:@"results"];
         
@@ -60,8 +76,15 @@
 - (void)getRequestToAPIwithSearchString:(NSString *)searchString {
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-        
-    [manager GET:[NSString stringWithFormat:@"https://api-public.guidebox.com/v1.43/US/%@/search/title/%@/fuzzy", APIKEY, searchString] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+    NSString *URLString = [NSString stringWithFormat:@"https://api-public.guidebox.com/v1.43/%@/%@/search/title/%@/fuzzy",
+                           [SearchState sharedManager].searchRegion,
+                           APIKEY,
+                           searchString];
+    NSLog(@"URLString2: %@", URLString);
+
+    
+    [manager GET:URLString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         resultsArray = [responseObject objectForKey:@"results"];
         
