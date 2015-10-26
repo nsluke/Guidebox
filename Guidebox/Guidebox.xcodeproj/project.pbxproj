@@ -22,6 +22,7 @@
 		D58C945B1BC776D600F66AD2 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C945A1BC776D600F66AD2 /* MainTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D58C94611BC89E3600F66AD2 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C94601BC89E3600F66AD2 /* CustomTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		D5B8D1FC1BD833EC0005865E /* SearchState.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B8D1FB1BD833EC0005865E /* SearchState.m */; settings = {ASSET_TAGS = (); }; };
+		D5EA6CA21BDD7299005FFF96 /* ResponseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EA6CA11BDD7299005FFF96 /* ResponseTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		D5F248F11BD2BDD3008B68EB /* DataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F248F01BD2BDD3008B68EB /* DataObject.m */; settings = {ASSET_TAGS = (); }; };
 		D5F248F41BD2CE8C008B68EB /* ChooseRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F248F31BD2CE8C008B68EB /* ChooseRegionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D5F248F81BD6D146008B68EB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F248F71BD6D146008B68EB /* SearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -74,6 +75,8 @@
 		D58C94601BC89E3600F66AD2 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		D5B8D1FA1BD833EC0005865E /* SearchState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchState.h; sourceTree = "<group>"; };
 		D5B8D1FB1BD833EC0005865E /* SearchState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchState.m; sourceTree = "<group>"; };
+		D5EA6CA01BDD7299005FFF96 /* ResponseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseTableViewCell.h; sourceTree = "<group>"; };
+		D5EA6CA11BDD7299005FFF96 /* ResponseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseTableViewCell.m; sourceTree = "<group>"; };
 		D5F248EF1BD2BDD3008B68EB /* DataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataObject.h; sourceTree = "<group>"; };
 		D5F248F01BD2BDD3008B68EB /* DataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataObject.m; sourceTree = "<group>"; };
 		D5F248F21BD2CE8C008B68EB /* ChooseRegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseRegionViewController.h; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 		D5F248F51BD2CEA1008B68EB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D5EA6CA01BDD7299005FFF96 /* ResponseTableViewCell.h */,
+				D5EA6CA11BDD7299005FFF96 /* ResponseTableViewCell.m */,
 				D58C942C1BC76F4900F66AD2 /* ViewController.h */,
 				D58C942D1BC76F4900F66AD2 /* ViewController.m */,
 				D58C94591BC776D600F66AD2 /* MainTableViewController.h */,
@@ -397,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5EA6CA21BDD7299005FFF96 /* ResponseTableViewCell.m in Sources */,
 				D5F248F41BD2CE8C008B68EB /* ChooseRegionViewController.m in Sources */,
 				D5F248F11BD2BDD3008B68EB /* DataObject.m in Sources */,
 				D5B8D1FC1BD833EC0005865E /* SearchState.m in Sources */,

@@ -33,7 +33,7 @@
     }
     
     if ([SearchState sharedManager].searchType == nil) {
-        [SearchState sharedManager].searchType = @"shows";
+        [SearchState sharedManager].searchType = @"show";
     }
     
     
@@ -51,13 +51,14 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-    NSString *URLString = [NSString stringWithFormat:@"https://api-public.guidebox.com/v1.43/%@/%@/%@/all/%@/%@/all/all/",
+    NSString *URLString = [NSString stringWithFormat:@"https://api-public.guidebox.com/v1.43/%@/%@/%@s/all/%@/%@/all/all/",
                            [SearchState sharedManager].searchRegion,
                            APIKEY,
                            [SearchState sharedManager].searchType,
                            [[SearchState sharedManager].indexOfWhereToStart stringValue],
                            [[SearchState sharedManager].numberOfResultsToShow stringValue]];
-    NSLog(@"URLString: %@", URLString);
+    
+//    NSLog(@"URLString: %@", URLString);
 
     [manager GET:URLString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
@@ -123,24 +124,24 @@
 
 #pragma mark - Search Bar
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    
     [self getRequestToAPIwithSearchString:_titleSearchBar.text];
+    [self resignFirstResponder];
+}
+
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    [self resignFirstResponder];
 }
 
 #pragma mark - Segues
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    
     ViewController *destinationController = [segue destinationViewController];
     
     if ([segue.identifier isEqual: @"showDetail"]) {
-        
         destinationController.titleText = [NSString stringWithFormat:@"%@",[[resultsArray objectAtIndex:self.tableView.indexPathForSelectedRow.row] objectForKey:@"title"]];
         destinationController.details = [NSString stringWithFormat:@"%@",[[resultsArray objectAtIndex:self.tableView.indexPathForSelectedRow.row] objectForKey:@"first_aired"]];
         destinationController.imageURL = [[resultsArray objectAtIndex:self.tableView.indexPathForSelectedRow.row]objectForKey:@"artwork_448x252"];
+        destinationController.showID = [[resultsArray objectAtIndex:self.tableView.indexPathForSelectedRow.row] objectForKey:@"id"];
     }
-    
-    
 }
 
 @end

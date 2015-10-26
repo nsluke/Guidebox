@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic) NSString *titleText;
 @property (nonatomic) NSString *details;
 @property (nonatomic) NSString *imageURL;
-
+@property (nonatomic) NSString *showID;
 
 @end
 
