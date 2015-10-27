@@ -51,12 +51,14 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-    NSString *URLString = [NSString stringWithFormat:@"https://api-public.guidebox.com/v1.43/%@/%@/%@s/all/%@/%@/all/all/",
+    NSString *URLString = [[NSString stringWithFormat:@"https://api-public.guidebox.com/v1.43/%@/%@/%@s/all/%@/%@/all/all/",
                            [SearchState sharedManager].searchRegion,
                            APIKEY,
                            [SearchState sharedManager].searchType,
                            [[SearchState sharedManager].indexOfWhereToStart stringValue],
-                           [[SearchState sharedManager].numberOfResultsToShow stringValue]];
+                            [[SearchState sharedManager].numberOfResultsToShow stringValue]] stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet URLQueryAllowedCharacterSet]];
+    
+    
     
 //    NSLog(@"URLString: %@", URLString);
 
@@ -81,7 +83,9 @@
     NSString *URLString = [NSString stringWithFormat:@"https://api-public.guidebox.com/v1.43/%@/%@/search/title/%@/fuzzy",
                            [SearchState sharedManager].searchRegion,
                            APIKEY,
-                           searchString];
+                           [searchString stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet URLQueryAllowedCharacterSet]]];
+    
+    
     NSLog(@"URLString2: %@", URLString);
 
     
